@@ -13,7 +13,7 @@ app.get('/posts/:id', (req, res) => {
         }
         res.json(rows);
     });
-})
+});
 
 app.get('/posts', (req, res) => {
     DB.all('SELECT ID, TITLE FROM posts', (err, rows) => {
