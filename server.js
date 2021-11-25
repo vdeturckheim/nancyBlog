@@ -2,6 +2,8 @@ const Express = require('express');
 const app = Express();
 const DB = require('./database/db.js');
 
+// https://github.com/vdeturckheim/nancyBlog
+
 app.get('/posts/:id', (req, res) => {
     const postId = req.params.id;
     DB.all('SELECT * FROM posts WHERE ID = ?', [postId], (err, rows) => {
